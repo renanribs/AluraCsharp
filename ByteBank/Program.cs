@@ -32,5 +32,9 @@ Console.WriteLine($"Saldo Vanessa: {conta2.saldo}");
 Console.WriteLine("Depositando na conta Vanessa");
 conta2.Depositar(50);
 Console.WriteLine($"Saldo Vanessa: {conta2.saldo}");
+Console.WriteLine($"Tranferindo de Vanessa para Renan");
+conta2.Transferir(30, conta1);
+Console.WriteLine($"Saldo Renan: {conta1.saldo} | Saldo Vanessa: {conta2.saldo}");
+conta2.ExibeInformacao();
 
 Console.WriteLine();

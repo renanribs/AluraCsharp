@@ -30,5 +30,27 @@ namespace ByteBank
         {
             saldo = saldo + valor;
         }
+
+        public bool Transferir(double valor, ContaCorrente destino)
+        {
+            if (saldo < valor)
+            {
+                return false;
+            }
+            if (valor < 0) { return false; }
+            else
+            {
+                saldo = saldo - valor;
+                destino.saldo = destino.saldo + valor;
+                return true;
+            }
+        }
+
+        public void ExibeInformacao()
+        {
+            Console.WriteLine($"Nome titular: {titular}");
+            Console.WriteLine($"Conta: {conta}");
+            
+        }
     }
 }
