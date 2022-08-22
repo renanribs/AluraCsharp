@@ -8,11 +8,34 @@ namespace ByteBank
 {
     public class GerenciamentoDeProdutos
     {
-        public string nome;
-        public string fabricante;
-        public string codigoDeBarras;
-        public double valorUnitario;
-        public double valorDeCompra;
-        public int quantidadeEstoque;
+        class Aluno
+        {
+
+
+            private int matricula;
+            public string Nome { get; set; }
+            public string Email { get; set; }
+            public bool Status { get; set; }
+            public int TipoCurso { get; set; }
+
+
+            public int Matricula
+            {
+                get
+                {
+                    return matricula;
+                }
+                set
+                {
+                    if (matricula <= 0)
+                    {
+                        Console.WriteLine("Número de matricula invalido!");
+                    } else
+                    {
+                        matricula = value;
+                    }
+                }
+            }
+        }
     }
 }
