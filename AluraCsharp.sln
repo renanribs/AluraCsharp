@@ -5,9 +5,11 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AluraCsharp", "AluraCsharp\AluraCsharp.csproj", "{4C344738-D1BC-4791-8B98-999483113808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula2", "Aula2\Aula2.csproj", "{CE5FF999-32B4-4074-8E8B-7A31F88F4AD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aula2", "Aula2\Aula2.csproj", "{CE5FF999-32B4-4074-8E8B-7A31F88F4AD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBank", "ByteBank\ByteBank.csproj", "{B952B74C-E678-4D14-9E94-39523FD8E22E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ByteBank", "ByteBank\ByteBank.csproj", "{B952B74C-E678-4D14-9E94-39523FD8E22E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "byteBank_ADM", "byteBank_ADM\byteBank_ADM.csproj", "{244B3731-034E-44D8-88D5-BA65FA9C41FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{B952B74C-E678-4D14-9E94-39523FD8E22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B952B74C-E678-4D14-9E94-39523FD8E22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B952B74C-E678-4D14-9E94-39523FD8E22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244B3731-034E-44D8-88D5-BA65FA9C41FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244B3731-034E-44D8-88D5-BA65FA9C41FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244B3731-034E-44D8-88D5-BA65FA9C41FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244B3731-034E-44D8-88D5-BA65FA9C41FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
