@@ -52,11 +52,22 @@ Console.WriteLine();
 //Console.WriteLine(cliente.nome);
 //Console.WriteLine(conta3.titular.nome);
 
-Cliente vanessa = new Cliente();
+Cliente vanessa = new Cliente("Vanessa", "123456", "Engenheira");
+Cliente vanessa2 = new Cliente("Vanessa", "123456", "Engenheira");
+Cliente vanessa3 = new Cliente("Vanessa", "123456", "Engenheira");
+Cliente vanessa4 = new Cliente("Vanessa", "123456", "Engenheira");
 
-ContaCorrente conta4 = new ContaCorrente();
+ContaCorrente conta4 = new ContaCorrente(123, "123456");
 conta4.Saldo = 150;
 conta4.Titular = vanessa;
 Console.WriteLine($"Seu saldo é: {conta4.Saldo}");
+Console.WriteLine($"Seu numero de agencia é: {conta4.Numero_agencia}");
+Console.WriteLine($"Sua conta é: {conta4.Conta}");
+
+ContaCorrente conta5 = new ContaCorrente(123, "12333");
+ContaCorrente conta6 = new ContaCorrente(123, "123331");
+
+Console.WriteLine($"Número de contas criadas: {ContaCorrente.TotalDeContasCriadas} ");
+Console.WriteLine($"Numero de clientes cadastrados: {Cliente.TotaldeClientes} ");
 
 Console.WriteLine();

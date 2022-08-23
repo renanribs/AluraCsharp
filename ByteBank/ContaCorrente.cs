@@ -11,8 +11,35 @@ namespace ByteBank
     {
 
         public Cliente Titular { get; set; }
-        public string Conta { get;set;} 
-        public int Numero_agencia { get; set; }
+
+        private string _conta;
+        public string Conta { 
+            get { return _conta; }
+            set
+            {
+                if (value == null)
+                {
+                    Console.WriteLine("Número da conta inválido!");
+                } else { _conta = value; }
+            }
+        }
+
+        private int _numero_agencia;
+        public int Numero_agencia { 
+            get
+            {
+                return _numero_agencia;
+            } set
+            {
+                if (value <= 0)
+                {
+                    Console.WriteLine("Número da agencia invalido");
+                } else
+                {
+                    _numero_agencia = value;
+                }
+            }
+        }
         public string Nome_agencia { get; set; }
         
         private double saldo;
@@ -71,5 +98,14 @@ namespace ByteBank
                 saldo = value;
             }
         } 
+
+        public ContaCorrente(int numero_agencia, string conta)
+        {
+            Numero_agencia = numero_agencia;
+            Conta = conta;
+            TotalDeContasCriadas += 1;
+        }
+
+        public static int TotalDeContasCriadas { get; set; }
     }
 }
