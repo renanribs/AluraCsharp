@@ -12,18 +12,29 @@ namespace byteBank_ADM.Funcionarios
         //1 - diretor
         //2 - designer
         //N - ...
+        public static int totalDeFuncionarios { get; set; }
 
-        // private int _tipo;
+        public string Nome { get;  set; }
+        public string Cpf { get; private set; }
+        public double Salario { get; protected set; }
 
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-
-
-       
-        public double getBonificacao()
+        public virtual double getBonificacao()
         {
                 return Salario * 0.1; 
         }
+
+       
+        public Funcionario(string cpf, double salario)
+        {
+            this.Cpf = cpf;
+            this.Salario = salario;
+            totalDeFuncionarios++;
+        }
+
+        public virtual void AumentarSalario()
+        {
+            this.Salario = Salario * 1.1;
+        }
+
     }
 }
