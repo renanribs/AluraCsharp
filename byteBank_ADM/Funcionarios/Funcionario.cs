@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace byteBank_ADM.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         //0 - funcionário
         //1 - diretor

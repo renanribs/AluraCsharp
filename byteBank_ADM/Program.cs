@@ -4,33 +4,27 @@ using byteBank_ADM.Utilitario;
 Console.WriteLine("Boas vindas, ByteBank Adm!");
 Console.WriteLine();
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+CalcularBonificacao();
 
-Funcionario renan = new Funcionario("12345678", 2500);
-renan.Nome = "Renan Ribeiro";
+void CalcularBonificacao()
+{
+    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+    Designer pedro = new Designer("123");
+    pedro.Nome = "Pedro";
 
-Console.WriteLine($"Nome: {renan.Nome}");
-Console.WriteLine($"CPF: {renan.Cpf}");
-Console.WriteLine($"Salario: {renan.Salario}");
-Console.WriteLine($"Bonificacao {renan.getBonificacao()}");
-Console.WriteLine();
-Console.WriteLine($"Total de funcionarios: {Funcionario.totalDeFuncionarios}");
-Console.WriteLine();
-Diretor vanessa = new Diretor("123456", 5000);
-vanessa.Nome = "Vanessa Maluf";
+    Diretor paula = new Diretor("123");
+    paula.Nome = "Paula";
 
-Console.WriteLine($"Nome: {vanessa.Nome}");
-Console.WriteLine($"CPF: {vanessa.Cpf}");
-Console.WriteLine($"Salario: {vanessa.Salario}");
-Console.WriteLine($"Bonificacao {vanessa.getBonificacao()}");
-Console.WriteLine($"Total de funcionarios: {Funcionario.totalDeFuncionarios}");
-Console.WriteLine();
-gerenciador.Registrar(renan);
-gerenciador.Registrar(vanessa);
-Console.WriteLine();
-Console.WriteLine($"Total de bonificações: {gerenciador.getBonificacao()}");
+    Auxiliar igor = new Auxiliar("1234");
+    igor.Nome = "Igor";
 
-renan.AumentarSalario();
-Console.WriteLine($"Novo salario Renan: {renan.Salario}");
-vanessa.AumentarSalario();
-Console.WriteLine($"Novo salario Vanessa: {vanessa.Salario}");
+    GerenteDeContas camila = new GerenteDeContas("123");
+    camila.Nome = "Camila";
+
+    gerenciador.Registrar(pedro);  
+    gerenciador.Registrar(paula);  
+    gerenciador.Registrar(igor);  
+    gerenciador.Registrar(camila);  
+
+}
+
