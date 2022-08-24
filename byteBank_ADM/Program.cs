@@ -1,7 +1,10 @@
 ﻿using byteBank_ADM.Funcionarios;
+using byteBank_ADM.Utilitario;
 
 Console.WriteLine("Boas vindas, ByteBank Adm!");
 Console.WriteLine();
+
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
 
 Funcionario renan = new Funcionario();
 renan.Nome = "Renan Ribeiro";
@@ -21,3 +24,8 @@ Console.WriteLine($"Nome: {vanessa.Nome}");
 Console.WriteLine($"CPF: {vanessa.Cpf}");
 Console.WriteLine($"Salario: {vanessa.Salario}");
 Console.WriteLine($"Bonificacao {vanessa.getBonificacao()}");
+
+gerenciador.Registrar(renan);
+gerenciador.Registrar(vanessa);
+
+Console.WriteLine($"Total de bonificações: {gerenciador.getBonificacao()}");
